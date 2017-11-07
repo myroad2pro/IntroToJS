@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Home page</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+</head>
+
+<body onload="init();">
+    <div class="container">
+        <h3>Calculate Delta of Function</h3>
+        <form class="form my-2" id="parameters">
+            <div class="form-group row">
+                <label for="a" class="col-form-label col-sm-1 text-sm-right">a</label>
+                <input type="number" class="form-control col-sm-4" name="a" id="a" placeholder="Enter a value" oninput="deltaRoot();">
+            </div>
+            <div class="form-group row">
+                <label for="b" class="col-form-label col-sm-1 text-sm-right">b</label>
+                <input type="number" class="form-control col-sm-4" name="b" id="b" placeholder="Enter a value" oninput="deltaRoot();">
+            </div>
+            <div class="form-group row">
+                <label for="c" class="col-form-label col-sm-1 text-sm-right">c</label>
+                <input type="number" class="form-control col-sm-4" name="c" id="c" placeholder="Enter a value" oninput="deltaRoot();">
+            </div>
+        </form>
+
+        <p class="row">
+            <span class="col-sm-1 text-sm-right">Result: </span>
+            <span id="delta"></span>
+        </p>
+    </div>
+
+    <div class="container">
+        <h3>Guess A Number</h3>
+        <form>
+            <div class="form-group row">
+                <label for="inputNumber" class="col-sm-2 col-form-label text-sm-right">Your Guess</label>
+                <div class="col-sm-4">
+                    <input type="number" class="form-control" name="inputNumber" id="inputNumber" placeholder="Enter a number">
+                </div>
+                <input type="button" class="btn btn-primary col-sm-2 my-2" onclick="checkNumber();" value="Submit" />
+            </div>
+        </form>
+        <p class="row">
+            <span class="col-sm-12" id="guessResult"></span>
+        </p>
+    </div>
+
+    <div class="container">
+        <h3>It's Time For A Quiz</h3>
+        <form>
+            <h4 class="text-secondary">Who is the current President of the United States?</h4>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="quiz1" id="a11" value="obama"> Barrack Obama
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="quiz1" id="a12" value="trump"> Donald Trump
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="quiz1" id="a13" value="bush"> George W.Bush
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="quiz1" id="a14" value="clinton"> Bill Clinton
+                </label>
+            </div>
+            <input type="button" class="btn btn-primary col-sm-2" onclick="checkAnswer();" value="Submit" />
+        </form>
+        <p class="row">
+            <span class="col-sm-12" id="quizResult"></span>
+        </p>
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="js/script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
