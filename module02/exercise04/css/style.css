@@ -1,0 +1,8 @@
+div#dragMe{
+    width: 100px;
+    height: 100px;
+    background-color: #3C153B;
+    color: #89bd9e;
+    cursor: move !important;
+    position: absolute !important;
+}
